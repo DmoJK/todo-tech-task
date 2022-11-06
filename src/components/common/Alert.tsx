@@ -5,7 +5,7 @@ import style from './alert.module.css'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
 import { alertSlice } from '../../store/reducers/alert'
 
-const AlertNotification: FC = (props) => {
+const AlertNotification: FC = () => {
   const { alertText, isNewText } = useAppSelector(state => state.alertReducer)
   const dispatch = useAppDispatch()
   const { addText } = alertSlice.actions
@@ -13,9 +13,9 @@ const AlertNotification: FC = (props) => {
   const [showAlert, setShowAlert] = useState(false)
   const [show, setShow] = useState(false)
   let messageStyle = style.error
-  if(alertText === 'Товар уже есть в корзине' || alertText === 'Вы не выбрали товар') {
+  if (alertText === 'Товар уже есть в корзине' || alertText === 'Вы не выбрали товар') {
     messageStyle = style.alert
-  } else if(alertText === 'Товар добавлен в корзину' ) {
+  } else if (alertText === 'Товар добавлен в корзину') {
     messageStyle = style.added
   }
   useEffect(() => {
@@ -24,7 +24,7 @@ const AlertNotification: FC = (props) => {
       setShowAlert(true)
       const timer = setTimeout(() => {
         setShow(false)
-        dispatch(addText({text: alertText, isShow: false}))
+        dispatch(addText({ text: alertText, isShow: false }))
         clearInterval(timer)
       }, 2000)
     }

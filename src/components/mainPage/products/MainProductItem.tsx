@@ -1,13 +1,14 @@
 import React, { FC } from 'react'
-import { IPrice, IProduct } from '../../models/IProduct'
+import { IPrice, IProduct } from '../../../models/IProduct'
+import style from './MainProduct.module.css'
 
-interface ProductItem {
+interface MainProductItemProps {
     handleNavigate: (endpoint: string, pet: string) => void
     product: IProduct
     add: (product: IProduct, price: IPrice) => void
 }
 
-const ProductItem: FC<ProductItem> = ({ product, add, handleNavigate }) => {
+const MainProductItem: FC<MainProductItemProps> = ({ product, add, handleNavigate }) => {
     const handleAdd = (price: IPrice) => (event: React.MouseEvent) => {
         add(product, price)
     }
@@ -16,11 +17,11 @@ const ProductItem: FC<ProductItem> = ({ product, add, handleNavigate }) => {
     }
 
     return (
-        <div className='product'>
+        <div className={style.product}>
             <img src={product.img} onClick={handleRedirect(product.category + '/' + product.id, product.pet)} />
             <h3>{product.name}</h3>
             <div>{product.description}</div>
-            <div className='price'>
+            <div className={style.price}>
                 {product.price.map(price =>
                     <div key={price.id} onClick={handleAdd(price)}>
                         {price.weight === '' ? '' : `${price.weight} - `}{price.price}
@@ -31,4 +32,4 @@ const ProductItem: FC<ProductItem> = ({ product, add, handleNavigate }) => {
     )
 }
 
-export default ProductItem
+export default MainProductItem

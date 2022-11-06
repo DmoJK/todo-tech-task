@@ -764,6 +764,48 @@
       "status": "ожидает оплаты",
       "category": "syxoi",
       "pet": "cats"
+    },
+    {
+      "id": 5,
+      "idProduct": 2,
+      "img": "https://6kcmxu3d7l.a.trbcdn.net/upload/files-new/ba/89/59/535341_325x400.jpg",
+      "name": "Royal Canin",
+      "price": {
+        "weight": "8кг",
+        "price": "4000 ₽",
+        "id": 2
+      },
+      "status": "ожидает оплаты",
+      "category": "syxoi",
+      "pet": "dogs"
+    },
+    {
+      "id": 6,
+      "idProduct": 10,
+      "img": "https://6kcmxu3d7l.a.trbcdn.net/upload/files-new/f1/e1/a7/585131_325x400.jpg",
+      "name": "Petsmack",
+      "price": {
+        "weight": "250 мл",
+        "price": "70 ₽",
+        "id": 1
+      },
+      "status": "ожидает оплаты",
+      "category": "organic",
+      "pet": "cats"
+    },
+    {
+      "id": 7,
+      "idProduct": 12,
+      "img": "https://6kcmxu3d7l.a.trbcdn.net/upload/files-new/3d/29/92/601744_325x400.jpg",
+      "name": "PRO PLAN (консервы)",
+      "price": {
+        "weight": "85г",
+        "price": "50 ₽",
+        "id": 1
+      },
+      "status": "ожидает оплаты",
+      "category": "canned",
+      "pet": "dogs"
     }
   ]
 }

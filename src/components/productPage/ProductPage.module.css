@@ -11,16 +11,17 @@
 .description {
     margin-top: 20px;
 }
+
 .description ul {
     list-style: none;
     border-bottom: 3px solid rgba(0, 0, 0, 0.261);
 }
 
-.active{
+.active {
     border-bottom: 3px solid rgb(0, 0, 0);
 }
 
-.description ul li{
+.description ul li {
     display: inline;
     margin-right: 10px;
     cursor: pointer;
@@ -33,6 +34,7 @@
 .main {
     margin-top: 50px;
 }
+
 .price {
     margin-top: 50px;
     text-align: center;
@@ -50,9 +52,11 @@
     cursor: pointer;
     transition: transform 300ms ease;
 }
+
 .price li:active {
     transform: scale(1.05);
 }
+
 .selected {
     background-color: #ffe8e8;
 }

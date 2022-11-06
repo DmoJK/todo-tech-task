@@ -88,35 +88,6 @@ header ul.navigation li:hover {
     grid-template-rows: 0px 1fr;
 }
 
-.product__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 50px;
-}
-
-.product img {
-    max-width: 180px;
-    height: 220px;
-    transition: transform 300ms ease;
-    object-fit: cover;
-}
-
-.product img:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-.product {
-    text-align: center;
-    overflow: hidden;
-}
-
-.price div {
-    margin: 5px 50px;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 header .shop-cart-button:hover,
 header .shop-cart-button.active {
     transition: color 500ms ease;
@@ -189,68 +160,4 @@ header .total-price {
     float: right;
     font-size: 15px;
     margin-bottom: 5px;
-}
-
-.categories ul {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    list-style: none;
-}
-
-.categories ul li,
-.categories ul li div:first-child {
-    display: inline;
-    margin-right: 25px;
-    transition: color 500ms ease;
-}
-
-.categories ul li {
-    position: relative;
-}
-
-.categories ul li:first-child {
-    position: relative;
-    cursor: pointer;
-}
-
-.categories ul li div:first-child {
-    cursor: pointer;
-}
-
-.categories ul li .subcategory {
-    position: absolute;
-    left: -20px;
-    top: 20px;
-    width: 180px;
-    background: #fcf5f5;
-    padding: 20px;
-    border-radius: 4px;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 1;
-}
-
-.categories ul li:hover .subcategory {
-    visibility: visible;
-    opacity: 1;
-    border-radius: 10px;
-}
-
-.subcategory div {
-    padding-top: 10px;
-    margin-left: 15px;
-}
-.subcategory div span{
-    cursor: pointer;
-}
-
-
-.categories .navigation {
-    float: right;
-    cursor: pointer;
-}
-
-.categories .navigation div {
-    display: inline;
 }

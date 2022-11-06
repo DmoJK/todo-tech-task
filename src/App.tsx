@@ -1,8 +1,8 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import ProductContainer from './components/mainPage/ProductContainer'
+import MainProductContainer from './components/mainPage/products/MainProductContainer'
 import HeaderContainer from './components/header/HeaderContainer'
-import Categories from './components/mainPage/Categories'
+import Categories from './components/mainPage/categories/Categories'
 import ProductPageContainer from './components/productPage/ProductPageContainer'
 import AboutUs from './components/aboutUsPage/AboutUs'
 import AlertNotification from './components/common/Alert'
@@ -24,12 +24,12 @@ const App = () => {
         <Routes>
           <Route path='/cabinet' element={<CabinetPageContainer />} />
           <Route path='/about' element={<AboutUs />} />
-          <Route path='/' element={<ProductContainer />} />
-          <Route path='/dogs' element={<ProductContainer />} />
-          <Route path='/dogs/:category' element={<ProductContainer />} />
+          <Route path='/' element={<MainProductContainer />} />
+          <Route path='/dogs' element={<MainProductContainer />} />
+          <Route path='/dogs/:category' element={<MainProductContainer />} />
           <Route path='/dogs/:category/:id' element={<ProductPageContainer />} />
-          <Route path='/cats' element={<ProductContainer />} />
-          <Route path='/cats/:category' element={<ProductContainer />} />
+          <Route path='/cats' element={<MainProductContainer />} />
+          <Route path='/cats/:category' element={<MainProductContainer />} />
           <Route path='/cats/:category/:id' element={<ProductPageContainer />} />
           <Route path='*' element={<div className='not-found'>404 not found</div>} />
         </Routes>

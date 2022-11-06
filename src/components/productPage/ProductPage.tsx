@@ -18,8 +18,8 @@ const ProductPage: FC<ProductPage> = ({ product, add, handleAlert }) => {
     }
     const handleAdd = (id: number) => (event: React.MouseEvent) => {
         id === 0 ?
-        handleAlert('Вы не выбрали товар') :
-        add(product, product.price[id - 1])
+            handleAlert('Вы не выбрали товар') :
+            add(product, product.price[id - 1])
         setIsActive(0)
     }
     return (
@@ -29,8 +29,8 @@ const ProductPage: FC<ProductPage> = ({ product, add, handleAlert }) => {
                 <h3>{product.fullName}</h3>
                 <div className={style.description}>
                     <ul>
-                        <li onClick={() => setShow({ description: true, composition: false })} className={show.description ? style.active :''}>Описание</li>
-                        <li onClick={() => setShow({ description: false, composition: true })} className={show.composition ? style.active :''}>Состав</li>
+                        <li onClick={() => setShow({ description: true, composition: false })} className={show.description ? style.active : ''}>Описание</li>
+                        <li onClick={() => setShow({ description: false, composition: true })} className={show.composition ? style.active : ''}>Состав</li>
                     </ul>
                     {show.composition ? <div className={style.content}>{product.composition}</div> : <div className={style.content}>{product.fullDescription}</div>}
                 </div>

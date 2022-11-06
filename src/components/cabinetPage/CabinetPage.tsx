@@ -10,7 +10,6 @@ interface CabinetPageProps {
 }
 
 const CabinetPage: FC<CabinetPageProps> = ({ cartItems, remove, handleNavigate }) => {
-  let totalPrice = 0
   const handleDelete = (cartItem: ICart) => (event: React.MouseEvent,) => {
     event.stopPropagation()
     remove(cartItem)
@@ -18,6 +17,7 @@ const CabinetPage: FC<CabinetPageProps> = ({ cartItems, remove, handleNavigate }
   const handleRedirect = (endpoint: string, pet: string) => (event: React.MouseEvent) => {
     handleNavigate(endpoint, pet)
   }
+  let totalPrice = 0
 
   return (
     <div className={style.cabinet}>
@@ -28,7 +28,7 @@ const CabinetPage: FC<CabinetPageProps> = ({ cartItems, remove, handleNavigate }
             <>
               {cartItems.map(cartItem =>
                 <div className={style.product} key={cartItem.id}>
-                  <img src={cartItem.img} alt={'imgNotFound'} onClick={handleRedirect(cartItem.category + '/' + cartItem.id, cartItem.pet)}/>
+                  <img src={cartItem.img} alt={'imgNotFound'} onClick={handleRedirect(cartItem.category + '/' + cartItem.id, cartItem.pet)} />
                   <div className={style.productInfo}>
                     <div className={style.productName}>{cartItem.name}</div>
                     <div>{cartItem.status}</div>

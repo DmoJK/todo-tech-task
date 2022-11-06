@@ -1,6 +1,13 @@
 import { IProduct, IPrice, ICart } from "../../models/IProduct"
 
-export const AddToCart = (product: IProduct, price: IPrice, orders: ICart[], addToCart: (cart: ICart) => void, notAdded: any, handleAlert: (text: string) => void) => {
+export const AddToCart = (
+    product: IProduct,
+    price: IPrice,
+    orders: ICart[],
+    addToCart: (cart: ICart) => void,
+    notAdded: any,
+    handleAlert: (text: string) => void
+) => {
     let isAdded = false
     orders.forEach(el => {
         if (el.idProduct === product.id && el.img === product.img) {

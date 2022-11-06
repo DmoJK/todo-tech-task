@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import style from './Categories.module.css'
 
 const Categories: FC = () => {
     const navigate = useNavigate()
@@ -18,17 +19,17 @@ const Categories: FC = () => {
     }
 
     return (
-        <div className='categories'>
+        <div className={style.categories}>
             <ul>
-                <div className='navigation' >
+                <div className={style.navigation} >
                     {path.map(p => <div onClick={handleClick(p)} key={p}>/ {p === '' ? 'best' : p} </div>)}
                 </div>
-                <li className='category' >
+                <li className={style.category} >
                     <div onClick={handleNavigate('/')}>Лучшее предложение</div>
                 </li>
-                <li className='category' >
+                <li className={style.category} >
                     <div onClick={handleNavigate('/dogs')}>Товары для собак</div>
-                    <div className='subcategory'>
+                    <div className={style.subcategory}>
                         <div onClick={handleNavigate('/dogs/syxoi')}>
                             <span>сухой корм</span>
                         </div>
@@ -43,11 +44,11 @@ const Categories: FC = () => {
                         </div>
                     </div>
                 </li>
-                <li className='category'>
+                <li className={style.category}>
                     <div onClick={handleNavigate('/cats')}>Товары для кошек</div>
-                    <div className='subcategory'>
-                        <div onClick={handleNavigate('/cats/syxoi')}> 
-                        <span>сухой корм</span>
+                    <div className={style.subcategory}>
+                        <div onClick={handleNavigate('/cats/syxoi')}>
+                            <span>сухой корм</span>
                         </div>
                         <div onClick={handleNavigate('/cats/organic')}>
                             <span>натуральная еда</span>

@@ -11,10 +11,10 @@ const initialState: alertState = {
     isNewText: false
 }
 
-export const alertSlice = createSlice({ 
-    name: 'alert', 
+export const alertSlice = createSlice({
+    name: 'alert',
     initialState,
-    reducers : { 
+    reducers: {
         addText(state, action: PayloadAction<IAction>) {
             state.alertText = action.payload.text
             state.isNewText = action.payload.isShow

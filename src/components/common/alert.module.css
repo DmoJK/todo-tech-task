@@ -58,26 +58,34 @@
     font-weight: 600;
 }
 
-.alert.show, .added.show, .error.show {
+.alert.show,
+.added.show,
+.error.show {
     animation: show_slide 1s ease forwards;
 }
-.alert.hide, .added.hide, .error.hide {
+
+.alert.hide,
+.added.hide,
+.error.hide {
     animation: hide_slide 1s ease forwards;
 }
 
 @keyframes show_slide {
-    0%{
+    0% {
         transform: translateY(-10%);
     }
-    40%{
+
+    40% {
         transform: translateY(30%);
     }
 }
+
 @keyframes hide_slide {
-    20%{
+    20% {
         transform: translateY(20%);
     }
-    100%{
+
+    100% {
         transform: translateY(-200%);
     }
 }

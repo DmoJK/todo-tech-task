@@ -1,12 +1,14 @@
-import { productsAPI } from '../../services/ProductService'
-import ProductItem from './ProductItem'
-import { IPrice, IProduct } from '../../models/IProduct'
+import { productsAPI } from '../../../services/ProductService'
+import MainProductItem from './MainProductItem'
+import { IPrice, IProduct } from '../../../models/IProduct'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { AddToCart } from '../common/AddToCart'
-import { useAppDispatch } from '../../hooks/hooks'
-import { alertSlice } from '../../store/reducers/alert'
+import { AddToCart } from '../../common/AddToCart'
+import { useAppDispatch } from '../../../hooks/hooks'
+import { alertSlice } from '../../../store/reducers/alert'
+import { FC } from 'react'
+import style from './MainProduct.module.css'
 
-const ProductContainer = () => {
+const MainProductContainer: FC = () => {
   let { pathname } = useLocation()
   if (pathname === '/') {
     pathname = '/best'
@@ -33,14 +35,14 @@ const ProductContainer = () => {
   }
 
   return (
-    <div className='product__list'>
+    <div className={style.product__list}>
       {isLoading && <h1>Loading ...</h1>}
       {error && <h1>error</h1>}
       {data?.map(product =>
-        <ProductItem key={product.id} product={product} add={handleAdd} handleNavigate={handleNavigate} />
+        <MainProductItem key={product.id} product={product} add={handleAdd} handleNavigate={handleNavigate} />
       )}
     </div>
   )
 }
 
-export default ProductContainer
+export default MainProductContainer

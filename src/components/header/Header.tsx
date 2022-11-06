@@ -29,7 +29,7 @@ const Header: FC<HeaderProps> = ({ cartItems, remove }) => {
                     {isActive && <div className='shop-cart'>
                         {cartItems && cartItems.length > 0 ?
                             <>
-                                {cartItems.slice(0, 5).map(cartItem => <ShopCart key={cartItem.id} cartItem={cartItem} remove={remove} />) }
+                                {cartItems.slice(0, 5).map(cartItem => <ShopCart key={cartItem.id} cartItem={cartItem} remove={remove} />)}
                                 <p className='total-length'>Всего: {cartItems.length}</p>
                                 {cartItems.forEach(el => totalPrice += Number.parseFloat(el.price.price))}
                                 <p className='total-price'>Сумма: {new Intl.NumberFormat().format(totalPrice)}</p>
