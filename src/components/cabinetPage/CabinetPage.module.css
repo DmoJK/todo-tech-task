@@ -1,0 +1,95 @@
+.cabinet {
+    margin-top: 20px;
+}
+
+.mainText {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 0.85fr 2fr 70px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin: 20px 20px;
+    border: 2px solid black;
+}
+
+.product img {
+    cursor: pointer;
+    margin: 10px;
+    margin-left: 40px;
+    height: 200px;
+    max-width: 200px;
+}
+
+.productInfo {
+    margin-top: 40px;
+    
+}
+.productInfo div{
+    margin-bottom: 7px;
+}
+.productInfo .productName {
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    width: 180px;
+}
+
+.order {
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 15px;
+    height: 150px;
+}
+.order div{
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+}
+.order p{
+    padding: 0px 5px;
+    padding-top: 5px;
+}
+
+.order .pay{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    color: #d83030;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+
+.order .pay:hover{
+   transform: scale(1.25);
+}
+
+.value {
+    float: right;
+}
+
+.delete {
+    margin: auto 0px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    color: #be3434;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+.delete:hover {
+    color: #d83030;
+    transform: scale(1.5);
+}
