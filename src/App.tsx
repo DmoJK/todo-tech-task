@@ -7,8 +7,9 @@ import ProductPageContainer from './components/productPage/ProductPageContainer'
 import AboutUs from './components/aboutUsPage/AboutUs'
 import AlertNotification from './components/common/Alert'
 import CabinetPageContainer from './components/cabinetPage/CabinetPageContainer'
+import { FC } from 'react'
 
-const App = () => {
+const App: FC = () => {
   return (
     <div className='App'>
       <HeaderContainer />
