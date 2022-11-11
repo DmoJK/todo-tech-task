@@ -19,13 +19,12 @@ const AlertNotification: FC = () => {
     messageStyle = style.added
   }
   useEffect(() => {
-    if (alertText !== '') {
+    if (!show && alertText !== '') {
       setShow(true)
       setShowAlert(true)
       const timer = setTimeout(() => {
         setShow(false)
-        dispatch(addText({ text: alertText, isShow: false }))
-        clearInterval(timer)
+        dispatch(addText({ text: '', isShow: false }))
       }, 2000)
     }
   }, [isNewText === true])
