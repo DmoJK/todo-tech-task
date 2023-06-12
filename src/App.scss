@@ -1,0 +1,23 @@
+input,
+button {
+  font-size: 16px ;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+
+:root {
+  --bg-color: rgb(190, 190, 190);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+}

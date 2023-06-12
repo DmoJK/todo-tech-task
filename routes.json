@@ -1,7 +1,0 @@
-{
-    "/dogs/:category": "/dogs?category=:category",
-    "/cats/:category": "/cats?category=:category",
-    "/dogs/:id": "/dogs?id=:id",
-    "/cats/:id": "/cats?id=:id",
-    "/best/:id": "/best?id=:id"
-}
